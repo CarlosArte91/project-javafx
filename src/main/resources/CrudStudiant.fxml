@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="597.0" prefWidth="542.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ccruz.projectjavafx.controllers.CrudStudiantController">
+   <children>
+      <Label layoutX="196.0" layoutY="24.0" text="Studiants Management" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblID" layoutX="25.0" layoutY="85.0" text="Studiant ID" />
+      <Label fx:id="lblName" layoutX="25.0" layoutY="125.0" text="Name" />
+      <Label fx:id="lblEmail" layoutX="25.0" layoutY="165.0" text="Email" />
+      <Label fx:id="lblEnrollment" layoutX="25.0" layoutY="205.0" text="Enrollment" />
+
+      <TextField fx:id="txtID" layoutX="95.0" layoutY="80.0" prefHeight="25.0" prefWidth="264.0" />
+      <TextField fx:id="txtName" layoutX="95.0" layoutY="120.0" prefHeight="25.0" prefWidth="264.0" />
+      <TextField fx:id="txtEmail" layoutX="95.0" layoutY="160.0" prefHeight="25.0" prefWidth="264.0" />
+      <TextField fx:id="txtEnrollment" layoutX="95.0" layoutY="200.0" prefHeight="25.0" prefWidth="264.0" />
+
+      <Button fx:id="btnSave" layoutX="390.0" layoutY="82.0" mnemonicParsing="false" onAction="#save" prefHeight="35.0" prefWidth="123.0" text="Save" />
+      <Button fx:id="btnUpdate" layoutX="390.0" layoutY="135.0" mnemonicParsing="false" onAction="#update" prefHeight="35.0" prefWidth="123.0" text="Update" />
+      <Button fx:id="btnDelete" layoutX="390.0" layoutY="188.0" mnemonicParsing="false" onAction="#delete" prefHeight="35.0" prefWidth="123.0" text="Delete" />
+
+      <TableView
+              fx:id="tblStudiants"
+              layoutX="25.0"
+              layoutY="257.0"
+              prefHeight="317.0"
+              prefWidth="493.0"
+      >
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="50.0" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="163.0" text="Name" />
+          <TableColumn fx:id="colEmail" prefWidth="150.0" text="Email" />
+          <TableColumn fx:id="colEnrollment" prefWidth="130.0" text="Enrollment" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
